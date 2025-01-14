@@ -7,11 +7,37 @@
     font-family: 'Jura', serif;
 }
 
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+.btn__menu {
+    transition: all 400ms ease;
+}
+
+.btn__menu:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.alt__color {
+    color: #fff;
+}
+
+
+/* 
+
+HOME
+
+*/
+
 #landing {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(-45deg, rgba(140, 140, 140, 0.5), black);
 }
+
 
 .btn__menu--open {
     position: absolute;
@@ -21,7 +47,7 @@
     font-size: 24px;
 }
 
-.home {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +75,12 @@
         transform: rotate3d(2, -1, -1, -0.2turn);
     }
 }
+
+/* 
+
+MENU
+
+*/
 
 .mobile__menu {
     background: linear-gradient(45deg, green, aqua, blue);
@@ -87,18 +119,21 @@
     }
 }
 
-
-
 .menu__list {
     display: flex;
     flex-wrap: wrap;
+    max-width: 315px;
 }
 
 .menu__link {
     text-align: right;
     width: 50%;
     padding: 4px 0;
-    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.menu__link:hover {
+    color: #fff;
 }
 
 .menu__link--left-side {
@@ -108,7 +143,16 @@
 .menu__link--primary {
     border: 1px solid blue;
     border-radius: 24px;
-    padding-right: 18px;
+    width: 100%;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.menu__link--primary:hover {
+    border-color: #fff;
+    color: #fff;
+    background: linear-gradient(45deg, blue, aqua, aquamarine);
+    padding: 12px;
 }
 
 .btn__menu--close {
@@ -117,4 +161,75 @@
     right: 18px;
     font-size: 24px;
     color: #fff;
+}
+
+/* 
+
+ABOUT
+
+*/
+
+.about__container {
+    animation: slide-in 2s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.about__links {
+    margin-top: 18px;
+}
+
+.about__link {
+    padding-right: 12px;
+}
+
+.about__link--regular {
+    transition: all 1s ease;
+}
+
+.about__link--regular:hover {
+    color: #fff;
+}
+
+.about__link--primary {
+    border: 1px solid blue;
+    border-radius: 24px;
+    padding: 8px;
+    transition: all 1s ease;
+}
+
+.about__link--primary:hover {
+    border-color: #fff;
+    color: #fff;
+    background: linear-gradient(45deg, blue, aqua, aquamarine);
+}
+
+@media (max-width: 480px) {
+    .about__container {
+        max-width: 280px;
+    }
+
+    .about__links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
+
+    .about__link--primary {
+        width: 80%;
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .section__subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }

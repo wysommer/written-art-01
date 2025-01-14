@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN | written-art®</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c8fc247de9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing">
+      <div class="main">
+        <i
+          class="fa-solid fa-ellipsis btn__menu btn__menu--open"
+          onclick="openMenu()"
+        ></i>
+      </div>
+      <nav class="mobile__menu">
+        <i
+          class="fa-solid fa-xmark btn__menu btn__menu--close"
+          onclick="closeMenu()"
+        ></i>
+        <figure class="menu__logo--wrapper">
+          <a href="./index.html" class="menu__img--link">
+            <img src="./assets/logo.png" alt="logo" class="menu__logo--img" />
+          </a>
+        </figure>
+        <div class="menu__list">
+          <a href="./about.html" class="menu__link menu__link--left-side"
+            >ABOUT</a
+          >
+          <a href="./learn.html" class="menu__link menu__link--learn">LEARN</a>
+          <a href="#" class="menu__link menu__link--left-side">PORTFOLIO</a>
+          <a href="#" class="menu__link">ADVERTISE</a>
+          <a href="#" class="menu__link menu__link--primary">GET A WEBSITE</a>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>
