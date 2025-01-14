@@ -25,6 +25,12 @@ a {
     color: #fff;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 /* 
 
@@ -47,19 +53,15 @@ HOME
     font-size: 24px;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .logo__img {
     width: 100%;
     max-width: 240px;
+    cursor: pointer;
 }
 
 .logo__img:active {
+    cursor: grabbing;
     animation: rotate-img-3d 7s infinite ease alternate-reverse;
 }
 
@@ -211,8 +213,64 @@ ABOUT
     background: linear-gradient(45deg, blue, aqua, aquamarine);
 }
 
+/* 
+
+LEARN
+
+*/
+
+.learn__container {
+    animation: slide-up 2s ease;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.academy__price {
+    margin: 12px 0 24px 0;
+}
+
+.academy__link {
+    margin-top: 24px;
+    width: 100%;
+    padding: 8px 24px;
+}
+
+
+
+/* 
+
+PORTFOLIO
+
+*/
+
+.portfolio__container {
+    animation: slide-down 2s ease;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 
+
+MOBILE
+
+*/
+
 @media (max-width: 480px) {
-    .about__container {
+    .container {
         max-width: 280px;
     }
 
