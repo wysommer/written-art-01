@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jura', serif;
+}
+
+#landing {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, rgba(140, 140, 140, 0.5), black);
+}
+
+.btn__menu--open {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo__img {
+    width: 100%;
+    max-width: 240px;
+}
+
+.logo__img:active {
+    animation: rotate-img-3d 7s infinite ease alternate-reverse;
+}
+
+@keyframes rotate-img-3d {
+    0% {
+        transform: rotate3d(1, 1, 1, 45deg);
+    }
+    50% {
+        transform: rotate3d(1, 1, 1, -45deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: rotate3d(2, -1, -1, -0.2turn);
+    }
+}
+
+.mobile__menu {
+    background: linear-gradient(45deg, green, aqua, blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 800ms ease;
+}
+
+.menu--open .mobile__menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__logo--img {
+    max-width: 315px;
+    width: 100%;
+    animation: rotate-img 7s infinite ease-in-out;
+}
+
+@keyframes rotate-img {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__link {
+    text-align: right;
+    width: 50%;
+    padding: 4px 0;
+    text-decoration: none;
+}
+
+.menu__link--left-side {
+    text-align: left;
+}
+
+.menu__link--primary {
+    border: 1px solid blue;
+    border-radius: 24px;
+    padding-right: 18px;
+}
+
+.btn__menu--close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 24px;
+    color: #fff;
+}
