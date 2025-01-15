@@ -233,13 +233,7 @@ LEARN
 }
 
 .academy__price {
-    margin: 12px 0 24px 0;
-}
-
-.academy__link {
-    margin-top: 24px;
-    width: 100%;
-    padding: 8px 24px;
+    margin: 12px 0 28px 0;
 }
 
 
@@ -269,6 +263,7 @@ PORTFOLIO
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .portfolio__item {
@@ -303,8 +298,36 @@ START
     margin: 12px 0 30px 0;
 }
 
-.start__button {
+.btn {
     padding: 12px 24px;
+}
+
+/* 
+
+ADS
+
+*/
+
+.ads__container {
+    animation: slide-in-right 2s ease;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.two__links--second {
+    margin-left: 12px;
+    transition: all 1s ease;
+}
+
+.two__links--second:hover {
+    color: #fff;
 }
 
 /* 
